@@ -1,0 +1,23 @@
+.menu{
+
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: red;
+
+}
+
+.menu-enter-active {
+    scale: 1;
+}
+
+.menu-leave-active {
+    scale: 0;
+}
+
+.menu-enter-from,
+.menu-leave-to {
+    scale: 0;
+}

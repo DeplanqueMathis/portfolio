@@ -1,10 +1,37 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div class="header">
+    <div class="header-logo">
+      M.A.D
+    </div>
+    <span class="header-menu" @click="afficher_menu = true">
+      Menu
+    </span>
   </div>
+  <Menu>
+
+  </Menu>
   <router-view />
 </template>
+
+<script>
+import Menu from "@/components/Menu.vue";
+
+export default {
+  name: "App",
+  components: {
+    Menu,
+  },
+  data: function (){
+
+    return{
+
+      afficher_menu: false,
+
+    };
+
+  },
+};
+</script>
 
 <style>
 #app {
