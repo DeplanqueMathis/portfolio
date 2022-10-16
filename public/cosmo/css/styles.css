@@ -1,0 +1,542 @@
+/** Ce style est cadeau ;-) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 62.5%;
+}
+
+header{
+	padding-top: 20px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.header-logo{
+	display: inline-block;
+}
+
+.header-toogle{
+	visibility: hidden;
+}
+
+.header-menu{
+	display: flex;
+	justify-content: space-between;
+	width: 60%;
+	margin: 0 auto;
+}
+
+.header-menu a{
+	font-size: 1rem;
+	padding: 10px;
+	color: #202020;
+	text-decoration: none;
+	background-color: white;
+	text-transform: uppercase;
+	transition-duration: 1s;
+}
+
+.header-menu a:hover{
+	background-color: #202020;
+	color: white;
+}
+
+.short-text{
+	text-align: center;
+	font-size: 1rem;
+	background-color: #E4E4E4;
+	padding: 50px;
+}
+
+.banner{
+	height: 700px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+}
+
+.banner-video{
+	position: absolute;
+}
+
+.banner-video-overlay{
+	position: absolute;
+	background-color: black;
+	height: 700px;
+	width: 100%;
+	opacity: 0.5;
+}
+
+.banner-desc{
+	z-index: 5;
+}
+
+.banner-desc h1{
+	font-family: 'Reenie Beanie';
+	color: white;
+	font-size: 6rem;
+}
+
+.banner-desc a{
+	color: white;
+	text-decoration: none;
+	border: solid 2px white;
+	padding: 1rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	font-size: 1.5rem;
+	transition-duration: 1s;
+}
+
+.banner-desc a:hover{
+	background-color: white;
+	color: black;
+}
+
+.three-women > div{
+	display: flex;
+	height: 700px;
+}
+
+.three-women-item{
+	flex-grow: 1;
+	position: relative;
+	overflow: hidden;
+}
+
+.three-women-item img{
+	width: 100%;
+	position: absolute;
+	transition:  transform 500ms; 
+	transform: translate3d(0,0,0) scale(1.15);
+}
+
+.three-women-item:hover img{
+  transform: translate3d(0,0,0) scale(1.05);
+}
+
+
+.three-women-item figcaption{
+	position: absolute;
+	bottom: 2.5rem;
+	left:0;
+	right: 0;
+	text-align: center;
+	color: white;
+}
+
+figcaption h3{
+	font-family: "Reenie Beanie";
+	margin-bottom: 20px;
+	font-size: 3rem;
+}
+
+figcaption span{
+	border: solid 1px white;
+	padding: 1rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	font-size: 1.5rem;
+	transition-duration: 1s;
+}
+
+figcaption span:hover{
+	background-color: white;
+	color: black;
+}
+
+.footer{
+	text-align: center;
+	font-family: "Reenie Beanie";
+	font-size: 2rem;
+}
+
+.text-hide {
+         font: 0/0 a;
+         color: transparent;
+         text-shadow: none;
+         background-color: transparent;
+         border: 0;
+}
+
+.footer-socials a{
+	margin: 0.15rem;
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	background: url("../images/socials.jpg");
+	background-size: 1rem;
+}
+
+#btn-fb{
+	background-position: -3px -5px;
+	transition-duration: 0.5s;
+}
+
+#btn-fb:hover{
+	background-position: -3px -52px;
+}
+
+#btn-tw{
+	background-position: -64px -5px;
+	transition-duration: 0.5s;
+}
+
+#btn-tw:hover{
+	background-position: -64px -52px;
+}
+
+#btn-yt{
+	background-position: -126px -5px;
+	transition-duration: 0.5s;
+}
+
+#btn-yt:hover{
+	background-position: -126px -52px;
+	transition-duration: 0.5s;
+}
+
+#btn-it{
+	background-position: -189px -5px;
+	transition-duration: 0.5s;
+}
+
+#btn-it:hover{
+	background-position: -189px -52px;
+}
+
+#btn-tu{
+	background-position: -251px -5px;
+	transition-duration: 0.5s;
+}
+
+#btn-tu:hover{
+	background-position: -251px -52px;
+}
+
+.bons-plans{
+	text-align: center;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	background-color: #E4E4E4;
+}
+
+.bons-plans h2{
+	font-family: "Reenie Beanie";
+	font-size: 4rem;
+	color:#363636;
+}
+
+form{
+	width: 25rem;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.45rem;
+	background-image: url("../images/bon-reduction.png");
+	background-repeat: no-repeat;
+	margin-top: 1rem;
+}
+
+form p{
+	display:block;
+	color: #363636;
+	text-align: left;
+	text-transform: uppercase;
+	margin-left: 35%;
+	width: 70%;
+	height: 12rem;
+	margin-bottom: 1rem;
+}
+
+form div{
+	display: flex;
+}
+
+input[type="email"]{
+	flex-basis: 60%;
+	height: 3rem;
+	font-size: 1rem;
+}
+
+input[type="submit"]{
+	flex-basis: 40%;
+	background-color: transparent;
+	border: solid 1.5px black;
+	font-size: 1.5rem;
+}
+
+.articles{
+	width: 80%;
+	height: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.articles>div{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.articles>div > div{
+	margin: 10px;
+	width: 30%;
+	background-color: #E4E4E4;
+}
+
+.articles-img{
+	position: relative;
+	overflow: hidden;
+}
+
+.articles-img img{
+	margin-top: 10px;
+	margin-left: 5%;
+	padding-bottom: 10px;
+	width: 90%;
+}
+
+.articles-date{
+	font-style: italic;
+	font-family: 'Times New Roman', Arial, sans-serif;
+	top: 5px;
+	position: relative;
+	font-size: 1rem;
+	left: 9rem;
+}
+
+.articles .articles-date:after{
+   content:'';                  
+   position: absolute;          
+   width: 50px;                 
+   height: 1px;                 
+   left: 50%;                   
+   transform: translateX(-50%); 
+   background: black;           
+   bottom:0;                    
+}
+
+.articles-title{
+	display: block;
+	margin-top: 20px;
+	font-size: 1rem;
+	padding:0 20px;
+}
+
+.articles a{
+	color: black;
+	text-decoration: none;
+}
+
+.articles-over > span{
+	font-family: "Reenie Beanie";
+	font-size: 2rem;
+	color: white;
+	position: absolute;
+	top: 110%;
+	left: 30%;
+	transition-duration: 0.5s;
+}
+
+.articles>div div>a:hover .articles-over>span{
+	top: 40%;
+}
+
+.articles-over{
+	position: absolute;
+	top: 7%;
+	right: 7%;
+	width: 85%;
+	height: 85%;
+	transition-duration: 0.5s;
+}
+
+.articles>div div>a:hover .articles-over{
+	background-color: rgba(0,0,0,0.75);
+}
+
+.articles > .title-like{
+	text-align: center;
+	font-family: "Reenie Beanie";
+	font-size: 5rem;
+	padding: 20px 0;
+}
+
+.tendances{
+	display: flex;
+}
+
+.tendances-item{
+	flex-basis: 50%;
+}
+
+.tendances-inverse{
+	flex-direction: row-reverse;
+}
+
+.tendances-img{
+	height: 750px;
+	background-size: cover;
+	background-position: 50%;
+	position: relative;
+}
+
+.tendances-txt {
+    display: block;
+    font-size: 1.25rem;
+    text-align: justify;
+    padding: 0 100px ;
+    color: grey;
+}
+
+.tendances-txt p{
+	margin-bottom: 30px;
+}
+
+.tendances-txt a{
+	text-decoration: none;
+	color: dodgerblue;
+}
+
+.tendances-txt h3{
+	font-family: "Reenie Beanie";
+	color: black;
+	font-size: 6rem;
+	margin-bottom: 20px;
+}
+
+.tendances-txt .btn-grey{
+	color: gray;
+	text-decoration: none;
+	border: solid 1px black;
+	padding: 0.5rem 2rem;
+	font-size: 1.5rem;
+	transition-duration: 0.5s;
+}
+
+.tendances-txt .btn-grey:hover{
+	background-color: gray;
+	color: white;
+}
+
+.tendances-img > span{
+	background-color: rgba(0,0,0,0.75);
+	text-align: center;
+	width: 100%;
+	padding: 1.5rem 0;
+	position: absolute;
+	bottom: 0;
+	color: white;
+	font-size: 0.75rem;
+}
+
+.confidence{
+	background: linear-gradient(180deg, rgba(143,142,142,1) 0%, rgba(126,126,126,1) 87%, rgba(173,173,173,1) 100%);
+	position: relative;
+	height: 800px;
+}
+
+.confidence-intro{
+	position: absolute;
+	margin-left: 5rem;
+	top: 5rem;
+}
+
+.confidence-intro h3{
+	font-size: 2rem;
+}
+
+.confidence-intro h2{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	color: white;
+	font-family: "Reenie Beanie";
+	font-size: 5rem;
+	line-height: 4rem;
+}
+
+.confidence-intro p{
+	font-size: 1.5rem;
+	font-family: 'Times New Roman', Arial, sans-serif;
+	font-style: italic;
+	width: 27%;
+	margin-bottom: 2rem;
+}
+
+.confidence-intro > a{
+	color: white;
+	text-decoration: none;
+	font-size: 1.5rem;
+}
+
+.visible-sm-inline-block{
+	position: absolute;
+	left: 45rem;
+	top: 25rem;
+	color: white;
+	text-decoration: none;
+	border: solid 1px white;
+	padding: 0.5rem 2rem;
+	font-size: 1.5rem;
+	transition-duration: 0.5s;
+}
+
+.visible-sm-inline-block:hover{
+	background-color: white;
+	color: black;
+}
+
+.confidence-visuel{
+	position: absolute;
+	top: 2rem;
+	left: 35rem;
+	width: 20rem;
+}
+
+.confidence-decor img{
+	position: absolute;
+	bottom: 2rem;
+	right: 2rem;
+	width: 22rem;
+}
+
+.confidence-prix{
+	position: relative;
+	top: 22rem;
+	left: 47rem;
+	color: white;
+}
+
+.designation{
+	position: absolute;
+	font-size: 2rem;
+	top: 1rem;
+}
+
+.confidence-prix a{
+	visibility: hidden;
+}
+
+.prix > span{
+	position: absolute;
+	font-size: 1rem;
+	top: -1rem;
+}
+.prix{
+	position: absolute;
+	font-size: 2.5rem;
+	top: 5rem;
+}
+
+@media screen and (max-width:500px) {	
+	
+
+}

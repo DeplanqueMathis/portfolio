@@ -1,0 +1,19 @@
+.footer{
+
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Chillax-medium';
+
+}
+
+.footer > a{
+
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+
+}

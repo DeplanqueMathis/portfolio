@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ikao - Ikéa, mais en mieux !</title>
+    <meta charset="UTF-8">
+
+    <link href="css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    
+    <!--montserrat google font avec les variantes --> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet"> 
+    
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width" />
+
+</head>
+<body>
+	<!--
+
+		Comment commencer une page HTML ? 
+		- établir un postulat de notre page : 
+			-> quels sont les éléments dont je dispose, 
+			-> y a t-il des éléments récurrents (type de liens, styles de titres, etc)
+			-> Organiser une hierarchie logique du document : prioriser l'importance des éléments
+		- Commencer le code HTML :
+			-> Etablir un squelette souple (uniquement les grandes zones dans un 1er temps)
+			-> Remplir chaque zone de manière de plus en plus précise, et construire le Css en parralèlle 
+			-> Aller à l'essentiel (intégration Grosse maille), puis affiner chaque zones / éléments
+			-> Chaque élément ne doit pas géner le reste de la page
+		- Affiner l'intégration et le rendu
+			-> Garder la maquette sous les yeux au maximum
+			-> Affiner les tailles de typos, écarts, espaces, etc 
+			-> Ajouter des éléments HTML si besoin uniquement pour la mise en page
+			-> Objectif : Avoir l'HTML le plus propre possible (c'est à dire le plus logique et le moins verbeux possible)
+
+		Bonus : la class "container" => 
+			peut servir a mettre un centrer un element structurant ;
+				.container{
+					max-width: 1200px; /* boite 1200px max centrée */
+					margin: 0 auto; /* centrage horizontal d'un display block */
+					padding-left: 10px;
+					padding-right: 10px;
+				}
+
+		Optimisation CSS : 
+		- Syntaxe BEM pour le nommage des classes : essayer d'etre cohérent niveau marquage et styles
+        - DRY (dont repeat yourself) => mutualisez votre code CSS
+	-->
+
+	<header>
+		<div class="pre-header">
+			
+			<div class="container">
+				<!-- coordonnees -->
+				<nav class="pre-header__coords">
+					<a><span class="icon-tel"></span> +33101010101</a>
+					<a><span class="icon-mail"></span> info@ikao.com</a>
+				</nav>
+				<!-- mon compte -->
+				<nav class="pre-header__account">
+					<a>Mon Compte</a>
+				</nav>
+			</div>
+		</div>
+
+		<div class="container main-header" id="main-header">
+			<!-- logo -->
+			<a href="#"><img id="logo" src="images/logos/logo.png"></a>
+			<!-- menu -->
+				<nav class="main-header__menu">
+					<a href="#">accueil</a>
+					<a href="#">produits</a>
+					<a href="#">à propos</a>
+					<a href="#">blog</a>
+					<a href="#">contact</a>
+				</nav>
+				
+				<div id="panier">
+				<!-- recherche ici pas besoin de formulaire (on a pas de zone de saisie) -->
+				<span class="icon-search"></span>
+				<!-- panier -->
+					<span class="icon-panier"></span>
+					<div>
+						<h3>Panier</h3>
+						<p>3 produits 74€</p>
+					</div>
+				</div>
+		</div>
+	</header>
+
+
+	<main class="homepage container">
+
+		<section class="products-grid">
+			<!-- ma grille de produits -->
+			<div>
+				<div class="item">
+					<a href="google.com">
+						<img src="images/meubles/nouvellecollection.jpg">
+						<div>
+							<p>idees design 2017</p>
+							<p><strong>Nouvelle</strong></p><p> Collection</p>
+							<p>Votre intérieur sera le plus beau<br/> Même à la TV c'est pas si beau !</p>
+							<p>79.00€</p>
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<a href="test">
+						<img src="images/meubles/canape3places.jpg">
+						<div>
+							<p>canape - fauteuil</p>
+							<p>canapé 3 places en cuir</p>
+							<p>Acheter <span class="icon-achat"></span></p>
+						</div>
+						<div>
+							<p> 659.00€ </p>
+							<p> 499.00€ </p>
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="images/meubles/coussinsblancs.jpg">
+						<div>
+							<p>Banc blanc</p>
+							<p>Avec coussins</p>
+						</div>
+						<div>
+							<p> 99.00€ </p>
+							<p> Acheter </p>
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="images/meubles/chaise-accourdoirs.jpg">
+						<div>
+							<p>Chaises et</p>
+							<p>accoudoirs</p>
+						</div>
+						<div>
+							<p> 129.00€ </p>
+							<p> 99.00€ </p>
+							<p> vite j'en profite <span class="icon-achat"></span></p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div>
+				<div class="item">
+					<a href="#">
+						<img src="images/meubles/ziodinning.jpg">
+						<div>
+							<p>Chaises</p>
+							<p>Zio dining</p>
+						</div>
+						<div>
+							<p>Acheter <span class="icon-achat"></span></p>
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="images/meubles/totemfloor.jpg">
+						<div>
+							<p>Lampes / accessoires</p>
+							<p>totem floor</p>
+						</div>
+						<div>
+							<p>Acheter <span class="icon-achat"></span></p>
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="images/meubles/tabouret.jpg">
+						<div></div>
+						<div>
+							<p>Prix Design 2017 - Bar</p>
+							<p>Tissu rembourré</p>
+							<p>Cool le Tabouret</p>
+							<p>Vos fesses n'auront jamais eu autant d'amour...</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<!-- chaque item sera composé de : 
+				- 1 lien
+				- 1 image (ou background)
+				- 1 texte (stylisé de manière différentes selon les cas)
+			-->
+		</section>
+
+		<section class="products-selection">
+			<!-- en ce moment, recents, meilleures ventes ... -->
+			<nav class="products-selection__header">
+				<a href="#moment" class="actuelle">en ce moment</a>
+				<a href="#recents" class="">recents</a>
+				<a href="#ventes" class="">meilleures ventes</a>
+			</nav>
+			<div class="products-list">
+				<div class="product">
+					<div class="img">
+						<img src="images/meubles/bombichair1.png" alt="Image Bombi Chair">
+					</div>
+					<p class="text">Bombi Chair</p>
+					<p class="prix">399,00€</p>
+				</div>
+				<div class="product">
+					<div class="img">
+						<img src="images/meubles/seater.png">
+					</div>
+					<p class="text">Marvelous Seater</p>
+					<p class="prix">599,00€</p>
+				</div>
+				<div class="product">
+					<div class="img">
+						<img src="images/meubles/chairarmrests.png">
+						<p class="reduc">- 15%</p>
+					</div>
+					<p class="text">Chair Armrests</p>
+					<p class="prix">200,00€</p>
+				</div>
+				<div class="product">
+					<div class="img">
+						<img src="images/meubles/bombichair.png">
+					</div>
+					<p class="text">Bombi Chair new version</p>
+					<p class="prix">399,00€</p>
+				</div>
+			</div>
+
+		</section>
+
+		
+		<section class="categories">
+			<!-- horloge -->
+			<div class="cat">
+				<a href="google.com">
+					<img src="images/meubles/horloges.png">
+					<div>
+						<p>Décoration</p>
+						<p>Horloges</p>
+						<p>Voir <span class="icon-achat"></span></p>
+					</div>
+				</a>
+			</div>
+			<!-- table basse -->
+			<div class="cat">
+				<a href="google.com">
+					<img src="images/meubles/tablebase.jpg">
+					<div>
+						<p>Tables Basses</p>
+						<p>Palettes Paillettes</p>
+						<p>Voir <span class="icon-achat"></span></p>
+					</div>
+				</a>
+			</div>
+			<!-- lampes -->
+			<div class="cat">
+				<a href="google.com">
+					<img src="images/meubles/lampes.png">
+					<div>
+						<p style="text-transform: uppercase; color: white;">Lampes</p>
+						<p>Que la lumière soit</p>
+						<p>Voir <span class="icon-achat"></span></p>
+					</div>
+				</a>
+			</div>
+		</section>
+
+		<section class="best-products">
+			<h2>Meilleures Ventes</h2>
+			<!-- meilleures ventes -->
+			<div class="products-list">
+				<a href="produit" class="product2">
+					<div class="img">
+						<img src="images/meubles/puffchair.jpg">
+						<p class="new">NEW</p>
+						<div class="img-hover">
+							<p><span class="icon-panier"></span> Acheter</p>
+							<p><span class="icon-heart"></span></p>
+							<p><span class="icon-arrow"></span></p>
+						</div>
+					</div>
+					<p class="text">Puff Chair</p>
+					<p class="prix">287,00€</p>
+				</a>
+				<a href="produit" class="product2">
+					<div class="img">
+						<img src="images/meubles/daddychair.jpeg">
+						<div class="img-hover">
+							<p><span class="icon-panier"></span> Acheter</p>
+							<p><span class="icon-heart"></span></p>
+							<p><span class="icon-arrow"></span></p>
+						</div>
+					</div>
+					<p class="text">Daddy Chair</p>
+					<p class="prix">399,00€</p>
+				</a>
+				<a href="produit" class="product2">
+					<div class="img">
+						<img src="images/meubles/woodchair.jpg">
+						<div class="img-hover">
+							<p><span class="icon-panier"></span> Acheter</p>
+							<p><span class="icon-heart"></span></p>
+							<p><span class="icon-arrow"></span></p>
+						</div>
+					</div>
+					<p class="text">Wood Chair</p>
+					<p class="prix">198,00€</p>
+				</a>
+				<a href="produit" class="product2">
+					<div class="img">
+						<img src="images/meubles/cheerschair.png">
+						<p class="reduc">15%</p>
+						<p class="new">NEW</p>
+						<div class="img-hover">
+							<p><span class="icon-panier"></span> Acheter</p>
+							<p><span class="icon-heart"></span></p>
+							<p><span class="icon-arrow"></span></p>
+						</div>
+					</div>
+					<p class="text">Cheers Chair</p>
+					<p class="prix">200,00€</p>
+				</a>
+				
+				<a href="produit" class="product2">
+					<div class="img">
+						<img src="images/meubles/loiretchair.jpg">
+						<div class="img-hover">
+							<p><span class="icon-panier"></span> Acheter</p>
+							<p><span class="icon-heart"></span></p>
+							<p><span class="icon-arrow"></span></p>
+						</div>
+					</div>
+					<p class="text">Loiret Chair</p>
+					<p class="prix">200,00€</p>
+				</a>
+			</div>
+		</section>
+
+	</main>
+
+
+	<!--footer -->
+	<div class="partners container">
+		<!-- logos des partenaires (suedois mais pas que) -->
+		<h2>Suedois et pas que ...</h2>
+		<nav>
+			
+			<span class="icon-achat"></span>
+			
+			<a href="devon">
+				<img src="images/logos/logo1.jpg">
+			</a>
+			<a href="gan">
+				<img src="images/logos/logo2.jpg">
+			</a>
+			<a href="artek">
+				<img src="images/logos/logo3.jpg">
+			</a>
+			<a href="toncelli">
+				<img src="images/logos/logo4.jpg">
+			</a>
+			<a href="duravit">
+				<img src="images/logos/logo5.jpg">
+			</a>
+			<a href="zanotta">
+				<img src="images/logos/logo6.jpg">
+			</a>
+			
+			<span class="icon-achat"></span>
+		</nav>
+	</div>
+	<footer>
+		<div class="container">
+			<div class="advantages-footer">
+				<div class="avantage">
+					<span class="icon-avion"></span>
+					<div>
+						<h3>Livraison offerte</h3>
+						<p>Pour toute commande</p>
+					</div>
+				</div>
+				<div class="avantage">
+					<span class="icon-bouee"></span>
+					<div>
+						<h3>Support 24/7</h3>
+						<p>Un problème ? Pas de porblème</p>
+					</div>
+				</div>
+				<div class="avantage">
+					<span class="icon-box"></span>
+					<div>
+						<h3>Cartes cadeaux</h3>
+						<p>Pour faire plaisir</p>
+					</div>
+				</div>
+				<div class="avantage">
+					<span class="icon-billet"></span>
+					<div>
+						<h3>Securite</h3>
+						<p>Paiement 100% sécurisé</p>
+					</div>
+				</div>
+				<!-- livraison offerte, support, carte cadeaux, etc -->
+			</div>
+			
+			<hr>
+			
+			<div class="main-footer">
+				<!-- liens, logo, newsletter etc -->
+				<div class="company-footer">
+					<img src="images/logos/logo.png">
+					<p>Les meubles Ikea, mais en mieux</p>
+					
+					<p><span class="icon-geoguessr"></span> Quelque part en France, près de Lens</p>
+					
+					<p><span class="icon-tel"></span> +33101010101</p>
+					<p><span class="icon-mail"></span> info@ikao.com</p>
+				</div>
+
+				<div class="menu-footer">
+					<div>
+						<h3>Categories</h3>
+						<nav>
+							<ul>
+								<li><a href="#">Chaises</a></li>
+								<li><a href="#">Canapé</a></li>
+								<li><a href="#">Salon</a></li>
+								<li><a href="#">Chambres</a></li>
+								<li><a href="#">Tables</a></li>
+								<li><a href="#">Nouveautés</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div>
+						<h3>Informations</h3>
+						<nav>
+							<ul>
+								<li><a href="#">À propos</a></li>
+								<li><a href="#">Contact</a></li>
+								<li><a href="#">Conditions</a></li>
+								<li><a href="#">Service client</a></li>
+								<li><a href="#">Service client</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div>
+						<h3>Compte</h3>
+						<nav>
+							<ul>
+								<li><a href="#">Mon compte</a></li>
+								<li><a href="#">Mes commandes</a></li>
+								<li><a href="#">Panier</a></li>
+								<li><a href="#">Paiement sécurisé</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+
+				<div class="newsletter-footer">
+					<h3>Newsletter</h3>
+					<form action="" method="post">
+						<input type="email" placeholder="Votre e-mail">
+						<input type="submit" value="Souscrire">
+					</form>
+					<h3>Nous suivre</h3>
+					<nav>
+						<a href="#"><span class="icon-twitter"></span></a>
+						<a href="#"><span class="icon-fb"></span></a>
+						<a href="#"><span class="icon-google"></span></a>
+						<a href="#"><span class="icon-yt"></span></a>
+						<a href="#"><span class="icon-linkedin"></span></a>
+						<a href="#"><span class="icon-whatsapp"></span></a>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="sub-footer">
+		<div class="container">
+			<!-- copyright, logos paiement -->
+			<div class="sub-footer__copyright">
+				<p>&copy; <strong>Ikao.com</strong> - tout droits réservés</p>
+			</div>
+
+			<div class="sub-footer__payments">
+				<nav>
+					<a href="#"><span class="icon-visa"></span></a>
+					<a href="#"><span class="icon-paypal"></span></a>
+					<a href="#"><span class="icon-master"></span></a>
+					<a href="#"><span class="icon-discover"></span></a>
+					<a href="#"><span class="icon-amazon"></span></a>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

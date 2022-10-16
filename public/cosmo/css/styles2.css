@@ -1,0 +1,154 @@
+/** Ce style est cadeau ;-) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 62.5%;
+}
+
+header{
+	padding-top: 20px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.header-logo{
+	display: inline-block;
+}
+
+.header-toogle{
+	visibility: hidden;
+}
+
+.header-menu{
+	display: flex;
+	justify-content: space-between;
+	width: 60%;
+	margin: 0 auto;
+}
+
+.header-menu a{
+	font-size: 1rem;
+	padding: 10px;
+	color: #202020;
+	text-decoration: none;
+	background-color: white;
+	text-transform: uppercase;
+	transition-duration: 1s;
+}
+
+.header-menu a:hover{
+	background-color: #202020;
+	color: white;
+}
+
+.short-text{
+	text-align: center;
+	font-size: 1rem;
+	background-color: #E4E4E4;
+	padding: 50px;
+}
+
+.banner{
+	height: 700px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+}
+
+.banner-video{
+	position: absolute;
+}
+
+.banner-video-overlay{
+	position: absolute;
+	background-color: black;
+	height: 700px;
+	width: 100%;
+	opacity: 0.5;
+}
+
+.banner-desc{
+	z-index: 5;
+}
+
+.banner-desc h1{
+	font-family: 'Reenie Beanie';
+	color: white;
+	font-size: 6rem;
+}
+
+.banner-desc a{
+	color: white;
+	text-decoration: none;
+	border: solid 2px white;
+	padding: 1rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	font-size: 1.5rem;
+	transition-duration: 1s;
+}
+
+.banner-desc a:hover{
+	background-color: white;
+	color: black;
+}
+
+.three-women > div{
+	display: flex;
+	height: 700px;
+}
+
+.three-women-item{
+	flex-grow: 1;
+	position: relative;
+	overflow: hidden;
+}
+
+.three-women-item img{
+	width: 100%;
+	position: absolute;
+	transition:  transform 500ms; 
+	transform: translate3d(0,0,0) scale(1.15);
+}
+
+.three-women-item:hover img{
+  transform: translate3d(0,0,0) scale(1.05);
+}
+
+
+.three-women-item figcaption{
+	position: absolute;
+	bottom: 2.5rem;
+	left:0;
+	right: 0;
+	text-align: center;
+	color: white;
+}
+
+figcaption h3{
+	font-family: "Reenie Beanie";
+	margin-bottom: 20px;
+	font-size: 3rem;
+}
+
+figcaption span{
+	border: solid 1px white;
+	padding: 1rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	font-size: 1.5rem;
+	transition-duration: 1s;
+}
+
+figcaption span:hover{
+	background-color: white;
+	color: black;
+}

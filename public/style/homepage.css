@@ -1,0 +1,81 @@
+.homepage{
+
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.homepage-name{
+
+    font-family: 'Dirtyline';
+    color: white;
+    font-size: 8vw;
+
+}
+
+.homepage-illustration-container{
+
+    margin-left: 60px;
+    position: relative;
+
+}
+
+.homepage-illustration{
+
+    width: 20vw;
+    height: 80vh;
+
+}
+
+.homepage-circle-text{
+
+    position: absolute;
+    bottom: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    aspect-ratio: 1/1;
+    background: url("../images/noise.png"), radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 40%, rgba(15,15,15,1) 40%, rgba(15,15,15,1) 100%);
+    border-radius: 50%;
+
+}
+
+.homepage-circle-text > svg{
+
+    display: block;
+    margin: auto;
+    margin-top: 5%;
+    color: white;
+    font-family: 'Dirtyline';
+    font-weight: bold;
+    fill: currentColor;
+    height: auto;
+    max-width: 66vmin;
+    transform-origin: center;
+    width: 90%;
+    animation: rotating 15s linear infinite;
+    letter-spacing: 1.2px;
+
+}
+
+@keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .homepage-circle-text{
+
+        width: 95%;
+
+    }
+
+}
