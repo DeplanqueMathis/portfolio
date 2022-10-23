@@ -6,7 +6,7 @@
 *{
 
     font-family: 'Gavency';
-    color: black;
+    color: #23232d;
 
 }
 
@@ -14,15 +14,17 @@ body, html{
 
     padding: 0;
     margin: 0;
+    --color : #23232d;
 
 }
 
 .header{
 
-    position: relative;
+    z-index: 1;
+    position: fixed;
     width: 100vw;
     height: 10vh;
-    border-bottom: 2px solid black;
+    border-bottom: 5px solid black;
 
 }
 

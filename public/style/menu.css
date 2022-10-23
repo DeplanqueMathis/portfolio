@@ -1,23 +1,140 @@
 .menu{
 
+    visibility: hidden;
+    z-index: 10;
     position: absolute;
     width: 100vw;
     height: 100vh;
     top: 0;
     left: 0;
-    background-color: red;
+    overflow: hidden;
+    transition-delay: 0.5s;
 
 }
 
-.menu-enter-active {
-    scale: 1;
+.menu.active{
+
+    visibility: visible;
+    transition-delay: 0s;
+
 }
 
-.menu-leave-active {
-    scale: 0;
+.menu-container{
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+
 }
 
-.menu-enter-from,
-.menu-leave-to {
-    scale: 0;
+.menu-container-separator{
+
+    width: 100vw;
+    height: 50vh;
+    position: absolute;
+    background-color: #efef51;
+
+}
+
+.menu-container-separator:first-child{
+
+    top: 0;
+    left: -100%;
+    animation: disparition-menu-haut ease-in-out 0.5s;
+    animation-fill-mode: forwards;
+
+}
+
+
+.menu.active .menu-container-separator:first-child{
+
+    left: 0;
+    animation: apparition-menu-haut ease-in-out 0.5s;
+    animation-fill-mode: forwards;
+
+}
+
+.menu-container-separator:nth-child(2){
+
+    bottom: 0;
+    right: -100%;
+    animation: disparition-menu-bas ease-in-out 0.5s;
+    animation-fill-mode: forwards;
+
+}
+
+
+.menu.active .menu-container-separator:nth-child(2){
+
+    right: 0;
+    animation: apparition-menu-bas ease-in-out 0.5s;
+    animation-fill-mode: forwards;
+
+}
+
+.menu-nav{
+
+    z-index: 10;
+    position: absolute;
+
+}
+
+@keyframes apparition-menu-haut {
+
+    from{
+
+        left: -100%;
+
+    }
+    to{
+
+        left: 0;
+
+    }
+
+}
+
+@keyframes disparition-menu-haut {
+
+    from{
+
+        left: 0%;
+
+    }
+    to{
+
+        left: -100%;
+
+    }
+
+}
+
+@keyframes apparition-menu-bas {
+
+    from{
+
+        right: -100%;
+
+    }
+    to{
+
+        right: 0;
+
+    }
+
+}
+
+@keyframes disparition-menu-bas {
+
+    from{
+
+        right: 0;
+
+    }
+    to{
+
+        right: -100%;
+
+    }
+
 }

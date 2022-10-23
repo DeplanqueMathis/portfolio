@@ -1,9 +1,13 @@
 <template>
-  <transition name="menu">
-    <div class="menu" v-if="$root.afficher_menu" @click="$root.afficher_menu = false">
-
+  <div class="menu" :class="{'active' : $root.afficher_menu}" @click="$root.afficher_menu = false">
+    <div class="menu-container">
+      <div class="menu-container-separator"></div>
+      <div class="menu-container-separator"></div>
+      <div class="menu-nav">
+        <a href="/" :class="{'active' : true}">Accueil</a>
+      </div>
     </div>
-  </transition>
+  </div>
 </template>
 
 <script>
