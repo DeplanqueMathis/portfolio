@@ -264,6 +264,13 @@
             illustration: '/projects/bluediamonds.jpg',
             link: 'https://bluediamonds.app/'
           } ,
+          {
+            title: 'm.a.d',
+            paragraph: 'M.A.D is the website for my freelance missions.<br>' +
+                        'You can also found some articles where I speak about my discover and my feedback on my work.',
+            illustration: '/projects/mad.png',
+            link: 'https://freelance.mathisdeplanque.fr/'
+          } ,
         ],
       }
     },
