@@ -30,6 +30,12 @@
 
 }
 
+.homepage-illustration > img{
+
+    height: 100%;
+
+}
+
 .homepage-circle-text{
 
     position: absolute;
@@ -70,7 +76,7 @@
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (orientation: portrait) {
 
     .homepage-circle-text{
 

@@ -279,7 +279,7 @@
 
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (orientation: portrait) {
 
     .experiences{
 
@@ -307,7 +307,7 @@
     .experiences-cards{
 
         flex-direction: column;
-        overflow-x: visible;
+        overflow-x: hidden;
         height: auto;
 
     }
@@ -414,6 +414,12 @@
     .experience-icon:hover .experience-paragraph > p{
 
         visibility: hidden;
+
+    }
+
+    .experience:last-child{
+
+        margin-right: 0;
 
     }
 

@@ -60,11 +60,11 @@
 
     <div class="about-container">
       <p class="about-paragraph">
-        Hello, my name is Mathis Deplanque and I'm actually <span v-html="getAge()"></span>.<br>
-        I am a French developper, coding is my passion, I love learning new languages and fighting with bugs.<br>
-        I have a lot of other hobbies, such as video games, mangas, animes, photography, skateboarding, cycling and fishing.<br>
-        My principals quality are my determination and my optimism. My biggest default is my shyness.<br>
-        If you want to know my skills, keep scrolling !<br>
+        Bonjour, je suis Mathis Deplanque, j'ai actuellement <span v-html="getAge()"></span> ans.<br>
+        Je suis passioné par le développement, j'adore apprendre de nouveaux langages et me confronter à des difficultés.<br>
+        J'ai beaucoup d'autres passions, comme les jeux vidéos, les mangas, la photo, le vélo et la pêche. <br>
+        Mes qualités principales sont ma détermination, mon optimisme et ma facilité d'apprentissage.<br>
+        Si vous voulez en savoir plus sur mon travail scrollez !<br>
       </p>
     </div>
 
@@ -157,7 +157,7 @@
             <h3 class="project-title">{{ project.title }}</h3>
             <p class="project-paragraph" v-html="project.paragraph">
             </p>
-            <a class="project-link illustrations" :href="project.link" target="_blank">Go check</a>
+            <a class="project-link illustrations" :href="project.link" target="_blank">Visiter</a>
           </div>
         </template>
         <template v-else>
@@ -165,7 +165,7 @@
             <h3 class="project-title">{{ project.title }}</h3>
             <p class="project-paragraph" v-html="project.paragraph">
             </p>
-            <a class="project-link illustrations" :href="project.link" target="_blank">Go check</a>
+            <a class="project-link illustrations" :href="project.link" target="_blank">Visiter</a>
           </div>
           <div class="project-illustration-background illustrations">
             <img src="/images/background.jpg" />
@@ -178,7 +178,7 @@
 
   <footer class="footer">
 
-    Property of Mathis Deplanque | <a href="https://github.com/DeplanqueMathis"><span class="fa-brands fa-github"></span></a> <a href="https://www.linkedin.com/in/mathis-deplanque-5abbb3193/"><span class="fa-brands fa-linkedin"></span></a>
+    Propriété de Mathis Deplanque | <a href="https://github.com/DeplanqueMathis"><span class="fa-brands fa-github"></span></a> <a href="https://www.linkedin.com/in/mathis-deplanque-5abbb3193/"><span class="fa-brands fa-linkedin"></span></a>
 
   </footer>
 
@@ -191,83 +191,86 @@
       return {
         experiences: [
           {
-            title : 'baccalaureate',
+            title : 'Baccalauréat',
             year: '2019',
             icon: 'fa-solid fa-graduation-cap',
-            paragraph : 'In 2019 I got my scientific baccalaureate with mathematical specialty.',
+            paragraph : "En 2019 j'ai obtenu mon baccalauréat scientifique spécialité Mathématique.",
           },
           {
             title : 'dut MMI',
             year: '2021',
             icon: 'fa-solid fa-user-graduate',
-            paragraph : 'In 2021 I got my DUT MMI with development specialty.',
+            paragraph : "En 2021 j'ai obtenu mon DUT MMI (Métier du multimédia et de l'internet) avec une spécialisation en Web.",
           },
           {
-            title : 'EaSy-dEveLoPpeMeNt',
+            title : 'AtEJa',
             year: '2021',
             icon: 'fa-solid fa-box-archive',
-            paragraph : 'Since 2021 I work for Easy-développement as a back-end developer. I work on Eden, their ERP.',
+            paragraph : "Depuis 2021 je travail pour Ateja (anciennement easy-developpement) dans le développement d'un ERP nommé Eden",
           },
           {
             title : 'BlUe-DiAmONds',
             year: '2021 - 2022',
             img: '/images/solana.png',
-            paragraph : 'Between 2021 and 2022, I\'ve worked on Blue-Diamonds, a NFTs Marketplace on the Solana blockchain. I\'ve worked as full-stack developer.',
+            paragraph : "Durant 6 mois, entre 2021 et 2022, l'équipe d'Easy-developpement a développé un Marketplace NFT sur la blockchain Solana pour un de ses clients.",
           },
         ],
         projects: [
           {
             title: 'pOrtRAit',
-            paragraph: 'Portrait is a false project we make during our first DUT year.<br>\n' +
-                'We have to create an event and make all the communication around this.<br>\n' +
-                'I develop the website for this event.',
+            paragraph: "Portrait est un projet tutoré que nous avons réalisé pendant notre première année de DUT.<br>"+
+                "Nous avons du créer un évenement et sa communication.<br>" +
+                "Je me suis chargé de la réalisation du site Web.",
             illustration: '/projects/projetut.jpg',
             link: '/projettut/index.html'
           } ,
           {
             title: 'IKao',
-            paragraph: 'Ikao is a front project where we have to recreate a website from a mock-up.',
+            paragraph: "Ikao est un projet réalisé durant mes études ou ne devions reproduire un site à partir d'une maquette",
             illustration: '/projects/ikao.jpg',
             link: '/Ikao/index.html'
           } ,
           {
             title: 'CosMoPOlitAn',
-            paragraph: 'Cosmopolitan is a front project where we have to recreate a website from a mock-up.',
+            paragraph: "De la même manière qu'Ikao, Cosmopolitan est un projet front réalisé à partir d'une maquette.",
             illustration: '/projects/cosmo.jpg',
             link: '/cosmo/index.html'
           } ,
           {
             title: '19 COups',
-            paragraph: '19 Coups is a short movie we made in the second year of the DUT.<br>' +
-                        'I make a website to promote the movie',
+            paragraph: "19 Coups est un court métrage réalisé durant la deuxième année de mon DUT.<br>"+
+                "J'ai été ammené à réaliser un site pour le lancement et la promotion du court-métrage.",
             illustration: '/projects/19coups.jpg',
             link: '/19_coups/index.php'
           } ,
           {
             title: 'Art & Pêche',
-            paragraph: 'I create a 100% manageable shopping site for a client from scratch.',
+            paragraph: "Durant mes années de Freelance j'ai réalisé un e-commerce de zéro 100% administrable.<br>" + 
+                        "J'ai suivi les maquettes de Victor Wallart.",
             illustration: '/projects/Artetpeche.jpg',
             link: 'https://artetpeche.fr'
           } ,
           {
             title: 'MMI d\'or',
-            paragraph: 'To finish our DUT we have to create a project.<br>' +
-                        'Our team has decided to create an event to reward short-movie we made during the year</br>' +
-                        'I create the site where you can vote for the best movie if you are a student.',
+            paragraph: "Pour finaliser notre DUT nous devions créer un véritable évènement.<br>" +
+                        "Notre équipe a décidé de réaliser un évènement récompensant les courts métrages des étudiants.<br>" +
+                        "J'ai réalisé un site de présentation de l'évènement ainsi que des courts métrages.<br>" +
+                        "J'ai participé aux choix de chartes graphique et à la maquette du site.<br>" +
+                        "J'ai aussi créé un système de comptes permettant de voter pour vos courts métrages préférés durant la soirée de présentation.",
             illustration: '/projects/mmidor.jpg',
             link: '/MMI_OR/index.php'
           } ,
           {
             title: 'BlUE DiAmOndS',
-            paragraph: 'With the easy-developpement team we work on Blue Diamonds, a NFTs Marketplace on Solana blockchain.<br>' +
-                        'I work as front-end developer. I also touch on the connection between wallet and app.',
+            paragraph: "Avec l'équipe d'easy-developpement nous avons réalisé, à la demande d'un client, une Marketplace de NFT sur la blockchain Solana.<br>" +
+                        "J'y ai participé en tant que développeur full-stack mais ai principalement été chargé de l'intégration CSS et de la connexion avec les wallets.",
             illustration: '/projects/bluediamonds.jpg',
             link: 'https://bluediamonds.app/'
           } ,
           {
             title: 'm.a.d',
-            paragraph: 'M.A.D is the website for my freelance missions.<br>' +
-                        'You can also found some articles where I speak about my discover and my feedback on my work.',
+            paragraph: "M.A.D est le site pour mes missions freelance.<br>" +
+                        "Vous y retrouverez aussi des articles d'aide au développement et de résolutions de bugs.",
             illustration: '/projects/mad.png',
             link: 'https://freelance.mathisdeplanque.fr/'
           } ,
