@@ -1,6 +1,9 @@
 <template>
     <div class="project-container" @click="pushProjects">
-
+        <div class="project-detail">
+            <h1 v-html="project.title"></h1>
+            <p v-html="project.description"></p>
+        </div>
     </div>
 </template>
 
@@ -12,6 +15,33 @@
         data() {
             return {
                 initialProjectPosition: {},
+                projects: {
+                    'Cosmopolitan' : {
+                        title: 'Cosmopolitan',
+                        description: `Durant mes études j'ai du apprendre à reproduire des maquettes à l'identique en HTML/CSS.
+C'est dans ce cadre qu'intervient Cosmopolitan, après remise d'une maquettes et des assets j'ai reproduit à l'identique la maquette.`,
+                    },
+                    'BlueDiamonds' : {
+                        title: 'BlueDiamonds',
+                        description: `Avec l'équipe d'easy-developpement nous avons réalisé, à la demande d'un client, une Marketplace de NFT sur la blockchain Solana.<br>
+J'y ai participé en tant que développeur full-stack mais ai principalement été chargé de l'intégration CSS et de la connexion avec les wallets.`,
+                    },
+                    'M.A.D' : {
+                        title: 'M.A.D',
+                        description: `M.A.D est le site pour mes missions freelance.<br>
+Vous y retrouverez aussi des articles d'aide au développement et de résolutions de bugs.`,
+                    },
+                    'Ikao' : {
+                        title: 'Ikao',
+                        description: `Durant mes études j'ai du apprendre à reproduire des maquettes à l'identique en HTML/CSS.
+C'est dans ce cadre qu'intervient Ikao, après remise d'une maquettes et des assets j'ai reproduit à l'identique la maquette.`,
+                    },
+                }
+            }
+        },
+        computed: {
+            project() {
+                return this.projects[this.projectName]
             }
         },
         mounted(){

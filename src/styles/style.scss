@@ -58,6 +58,9 @@ a{
         justify-content: space-around;
         width: 50%;
     }
+    .nav-menu{
+        display: none;
+    }
 }
 
 .webgl{
@@ -110,7 +113,7 @@ a{
             font-size: 2.75vw;
         }
         p{
-            font-family: sans-serif;
+            font-family: 'Bebas Neue', sans-serif;
             font-weight: bold;
             font-size: 1.5vw;
             text-align: justify;
@@ -163,4 +166,67 @@ a{
     height: 100vh;
     z-index: 1;
     position: relative;
+    background: linear-gradient(0deg, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.5) 20%, rgba(2,0,36,0) 70%);
+    background-position: 0% 100%;
+    .project-detail{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 10px 20px;
+        p{
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5em;
+        }
+    }
+}
+
+@media screen and (min-width: 800px), (orientation: portrait) {
+    .header{
+        .logo-header{
+            font-size: 8vw;
+        }
+        .nav-header{
+            position: absolute;
+            width: 100%;
+            height: 30vh;
+            flex-direction: column;
+            top: -100vh;
+            left: 0;
+            transform: translateY(-50%);
+            transition-duration: 0.5s;
+        }
+        .nav-menu{
+            display: block;
+            span {
+                display: block;
+                width: 35px;
+                height: 5px;
+                background-color: white;
+                mix-blend-mode: difference;
+                margin: 6px 0;
+            }
+        }
+        &::before{
+            content: ' ';
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            top: -100vh;
+            background-color: black;
+            transition-duration: 0.5s;
+        }
+        &.active{
+            .nav-header{
+                top: 50vh;
+            }
+            &::before{
+                top: 0;
+            }
+        }
+    }
+    .home{
+        h1{
+            font-size: 15vw;
+        }
+    }
 }

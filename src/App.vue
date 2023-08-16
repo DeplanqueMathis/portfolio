@@ -1,14 +1,19 @@
 <template>
-  <div class="header">
+  <div :class="{'header': true, 'active': showMenu}">
     <h1 class="logo-header">
       <router-link to="/">M</router-link>
     </h1>
     <nav class="nav-header">
-      <router-link to="/">Accueil</router-link>
+      <router-link to="/">Acc&zwnj;cueil</router-link>
       <router-link to="/me">Mooi</router-link>
       <router-link to="/experiences">Experriences</router-link>
       <router-link to="/projets">Proojets</router-link>
     </nav>
+    <div class="nav-menu" @click="showMenu = !showMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
   <router-view v-slot="{ Component, route }">
     <transition name="fade" mode="out-in">
@@ -27,6 +32,7 @@ export default {
   data() {
     return {
       sphere: null,
+      showMenu: false,
     }
   },
   mounted() {
