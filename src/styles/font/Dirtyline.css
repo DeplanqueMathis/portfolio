@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Dirtyline';
+    src: url('Dirtyline 36daysoftype 2022.otf'), /* IE9 Compat Modes */
+         url('Dirtyline 36daysoftype 2022.woff') format('woff'), /* Modern Browsers */
+         url('Dirtyline 36daysoftype 2022.woff2') format('woff2'), /* Modern Browsers */
+         url('Dirtyline 36daysoftype 2022.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

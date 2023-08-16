@@ -1,30 +1,63 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="header">
+    <h1 class="logo-header">
+      <router-link to="/">M</router-link>
+    </h1>
+    <nav class="nav-header">
+      <router-link to="/">Accueil</router-link>
+      <router-link to="/me">Mooi</router-link>
+      <router-link to="/experiences">Experriences</router-link>
+      <router-link to="/projets">Proojets</router-link>
+    </nav>
+  </div>
+  <router-view v-slot="{ Component, route }">
+    <transition name="fade" mode="out-in">
+      <component :is="Component" :projectName="route.params.projectName ? route.params.projectName : ''"/>
+    </transition>
+  </router-view>
+
+  <canvas class="webgl"></canvas>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import ThreeClass from '@/three/script';
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+export default {
+  name: 'App',
+  data() {
+    return {
+      sphere: null,
     }
-  }
+  },
+  mounted() {
+    this.sphere = new ThreeClass();
+  },
+  methods: {
+    moveSphere(position) {
+      this.sphere.sphereTime = 0;
+      this.sphere.initialSpherePosition = this.sphere.sphereGroup.position;
+      this.sphere.finalSpherePosition = position;
+    },
+    moveTorus(position) {
+      this.sphere.torusTime = 0;
+      this.sphere.initialTorusPosition = this.sphere.group.position;
+      this.sphere.finalTorusPosition = position;
+    },
+    moveLight(position) {
+      this.sphere.lightTime = 0;
+      this.sphere.initialLightPosition = this.sphere.light.position;
+      this.sphere.finalLightPosition = position;
+    },
+    moveProjects(position) {
+      this.sphere.projectsTime = 0;
+      this.sphere.initialProjectsPosition = this.sphere.projectGroup.position;
+      this.sphere.finalProjectsPosition = position;
+    },
+    moveCamera(position) {
+      this.sphere.cameraTime = 0;
+      this.sphere.initialCameraPosition = this.sphere.camera.position;
+      this.sphere.finalCameraPosition = position;
+    }
+  },
 }
-</style>
+</script>
