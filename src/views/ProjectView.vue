@@ -46,12 +46,17 @@ C'est dans ce cadre qu'intervient Ikao, après remise d'une maquettes et des ass
         },
         mounted(){
             this.goProjects();
+            this.$root.showMenu = false;
             this.$root.sphere.rotationProjects = false;
             let timeOut = this.$root.sphere.projectGroup.position.y === 0 ? 50 : 1500
+            let zAxe = 3;
+            if(this.$root.isVertical){
+                zAxe = 10;
+            }
             setTimeout(() => {
                 let projectObject = this.$root.sphere.imagesMesh.find((projectObject) => projectObject.name === this.projectName);
                 let ProjectPosition = this.$root.sphere.projectGetPosition(projectObject);
-                ProjectPosition.z += 3;
+                ProjectPosition.z += zAxe;
                 this.$root.moveCamera(ProjectPosition);
             }, timeOut)
         },

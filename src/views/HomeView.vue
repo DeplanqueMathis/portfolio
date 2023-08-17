@@ -16,6 +16,7 @@ export default {
   name: 'HomeView',
   mounted() {
     this.goHome();
+    this.$root.showMenu = false;
   },
   methods: {
     goHome() {

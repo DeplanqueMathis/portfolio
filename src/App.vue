@@ -33,10 +33,14 @@ export default {
     return {
       sphere: null,
       showMenu: false,
+      isVertical: false,
     }
   },
   mounted() {
     this.sphere = new ThreeClass();
+
+    //Is vertical device
+    this.isVertical = window.innerWidth < window.innerHeight;
   },
   methods: {
     moveSphere(position) {

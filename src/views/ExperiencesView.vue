@@ -42,15 +42,20 @@
     },
     mounted() {
       this.goExperience();
+      this.$root.showMenu = false;
     },
     methods: {
       rotateCircle(sens) {
         this.$root.sphere.rotateCircle(sens);
       },
       goExperience() {
-        this.$root.moveSphere({x: 0, y: -0.25, z: 9});
-        this.$root.moveTorus({x: 0, y: -0.25, z: 9});
-        this.$root.moveLight({x: 0.25, y: 0, z: 15});
+        let zAxe = 9
+        if(this.$root.isVertical){
+          zAxe = 0;
+        }
+        this.$root.moveSphere({x: 0, y: -0.25, z: zAxe});
+        this.$root.moveTorus({x: 0, y: -0.25, z: zAxe});
+        this.$root.moveLight({x: 0.25, y: 0, z: zAxe + 6});
         this.$root.moveProjects({x: 0, y: 4, z: 3});
       },
     }

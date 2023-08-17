@@ -16,6 +16,7 @@
 export default {
   mounted() {
     this.goAbout();
+    this.$root.showMenu = false;
   },
   methods: {
     getDate(date) {

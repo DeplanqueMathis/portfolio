@@ -184,6 +184,7 @@ a{
 
 @media screen and (max-width: 800px), (orientation: portrait) {
     .header{
+        mix-blend-mode: initial;
         .logo-header{
             font-size: 8vw;
         }
@@ -216,6 +217,7 @@ a{
             top: -100vh;
             background-color: black;
             transition-duration: 0.5s;
+            z-index: -1;
         }
         &.active{
             .nav-header{
@@ -229,6 +231,18 @@ a{
     .home{
         h1{
             font-size: 15vw;
+        }
+    }
+
+    .about-container{
+        .about{
+            width: 90%;
+            h1{
+                font-size: 1.1rem;
+            }
+            p{
+                font-size: 1.2rem;
+            }
         }
     }
 }
