@@ -237,21 +237,21 @@ J'ai aussi pris la charge du maintien de l'API développé en Symfony.`,
                     font: font,
                     size: 0.05,
                     height: 0.05,
-                    curveSegments: 12,
+                    curveSegments: 2,
                     bevelEnabled: false,
                 });
                 let ExplainGeo = new TextGeometry( Experience.text.text, {
                     font: font,
                     size: 0.022,
                     height: 0.02,
-                    curveSegments: 12,
+                    curveSegments: 2,
                     bevelEnabled: false,
                 });
                 let dateGeo = new TextGeometry( Experience.date.text, {
                     font: font,
                     size: 0.025,
                     height: 0.05,
-                    curveSegments: 12,
+                    curveSegments: 2,
                     bevelEnabled: false,
                 });
                 let text = new THREE.Mesh(TextGeo, this.textMaterial);
